@@ -1,0 +1,33 @@
+.title-bar {
+    position: relative;
+    background-color: green;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-bar {
+    position: relative;
+    background-color: blue;
+    width: 25%;
+    text-align: left;
+}
+
+.section-content {
+    position: relative;
+    background-color: red;
+    width: 65%;
+    text-align: left;
+    clear: both;
+}
+
+.right-side {
+    position: relative;
+    background-color: purple;
+    text-align: right;
+}
+
+.footer-bar {
+    position: relative;
+    background-color: gray;
+    text-align: center;
+}
