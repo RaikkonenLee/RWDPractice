@@ -5,13 +5,31 @@
         <meta name="viewport" content="width=device-width" initial-scale="1">
         <title>MyFirstRWDPage</title>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="RelativeLeftMenuLayout.css">
     </head>
     <body>
         <header role="banner" class="title-bar">This Header</header>
-        <nav role="navigation" class="nav-bar">This Nav</nav>
-        <section class="section-content">This Content</section>
-        <aside class="right-side" role="complementary">This Aside</aside>
-        <footer class="footer-bar" role="contentinfo">This Footer</footer>
+        <section class="container">
+            <nav role="navigation" class="container-navbar" id="nav">
+                <ul>
+                    <li>1.aaa</li>
+                    <li>2.aaa</li>
+                    <li>3.aaa</li>
+                    <li>4.aaa</li>
+                    <li>5.aaa</li>
+                    <li>6.aaa</li>
+                    <li>7.aaa</li>
+                    <li>8.aaa</li>
+                    <li>9.aaa</li>
+                </ul>
+            </nav>
+            <section class="container-content" id="content">
+                <section class="content">This First Content</section>
+                <section class="content">This First Content</section>
+                <section class="content">This First Content</section>
+            </section>
+            <aside role="complementary" class="container-rightside" >Aside</aside>
+        </section>
+        <footer role="contentinfo" class="footer-bar">This Footer</footer>
     </body>
 </html>
