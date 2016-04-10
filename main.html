@@ -6,21 +6,25 @@
         <title>MyFirstRWDPage</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="RelativeLeftMenuLayout.css">
+        <!--float不太適合做整體頁面的排版，比較適合作局部的部份。-->
+        <!--<link rel="stylesheet" href="FloatLeftMenuLayout.css">-->
     </head>
     <body>
-        <header role="banner" class="title-bar">This Header</header>
+        <header role="banner" class="banner">
+            <h1>This Header</h1>
+        </header>
         <section class="container">
             <nav role="navigation" class="container-navbar" id="nav">
-                <ul>
-                    <li>1.aaa</li>
-                    <li>2.aaa</li>
-                    <li>3.aaa</li>
-                    <li>4.aaa</li>
-                    <li>5.aaa</li>
-                    <li>6.aaa</li>
-                    <li>7.aaa</li>
-                    <li>8.aaa</li>
-                    <li>9.aaa</li>
+                <ul class="menu">
+                    <li class="item">1.aaa</li>
+                    <li class="item">2.aaa</li>
+                    <li class="item">3.aaa</li>
+                    <li class="item">4.aaa</li>
+                    <li class="item">5.aaa</li>
+                    <li class="item">6.aaa</li>
+                    <li class="item">7.aaa</li>
+                    <li class="item">8.aaa</li>
+                    <li class="item">9.aaa</li>
                 </ul>
             </nav>
             <section class="container-content" id="content">
@@ -30,6 +34,6 @@
             </section>
             <aside role="complementary" class="container-rightside" >Aside</aside>
         </section>
-        <footer role="contentinfo" class="footer-bar">This Footer</footer>
+        <footer role="contentinfo" class="contentinfo">This Footer</footer>
     </body>
 </html>
