@@ -14,17 +14,67 @@
             <h1>This Header</h1>
         </header>
         <section class="container">
-            <nav role="navigation" class="container-navbar" id="nav">
-                <ul class="menu">
-                    <li class="item">1.aaa</li>
-                    <li class="item">2.aaa</li>
-                    <li class="item">3.aaa</li>
-                    <li class="item">4.aaa</li>
-                    <li class="item">5.aaa</li>
-                    <li class="item">6.aaa</li>
-                    <li class="item">7.aaa</li>
-                    <li class="item">8.aaa</li>
-                    <li class="item">9.aaa</li>
+            <nav role="navigation" class="container-navbar" id="menu">
+                <ul class="nav">
+                    <li>
+                        <a href="#" class="nav-level1-item">1.第一層</a>
+                        <span>></span>
+                        <ul class="nav-level1-ul">
+                            <li><a href="#">1-1</a></li>
+                            <li><a href="#">1-2</a></li>
+                            <li><a href="#">1-3</a></li>
+                            <li><a href="#">1-4</a></li>
+                            <li><a href="#">1-5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-level1-item">2.第二層</a>
+                        <ul class="nav-level1-ul">
+                            <li><a href="#">2-1</a></li>
+                            <li><a href="#">2-2</a></li>
+                            <li>
+                                <a href="#">2-3</a>
+                                <ul class="nav-level2-ul">
+                                    <li><a href="#">2-3-1</a></li>
+                                    <li><a href="#">2-3-2</a></li>
+                                    <li><a href="#">2-3-3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">2-4</a>
+                                <ul class="nav-level2-ul">
+                                    <li><a href="#">2-4-1</a></li>
+                                    <li><a href="#">2-4-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-level1-item">3.第三層</a>
+                        <ul class="nav-level1-ul">
+                            <li><a href="#">3-1</a></li>
+                            <li><a href="#">3-2</a></li>
+                            <li><a href="#">3-3</a></li>
+                            <li>
+                                <a href="#">3-4</a>
+                                 <ul class="nav-level2-ul">
+                                    <li><a href="#">3-4-1</a></li>
+                                    <li><a href="#">3-4-2</a></li>
+                                    <li><a href="#">3-4-3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">3-5</a>
+                                 <ul class="nav-level2-ul">
+                                    <li><a href="#">3-5-1</a></li>
+                                    <li><a href="#">3-5-2</a></li>
+                                    <li><a href="#">3-5-3</a></li>
+                                    <li><a href="#">3-5-4</a></li>
+                                    <li><a href="#">3-5-5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <section class="container-content" id="content">
@@ -35,5 +85,6 @@
             <aside role="complementary" class="container-rightside" >Aside</aside>
         </section>
         <footer role="contentinfo" class="contentinfo">This Footer</footer>
+        <script type="text/javascript" src="menu.js"></script>
     </body>
 </html>
