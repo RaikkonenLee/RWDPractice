@@ -7,6 +7,12 @@ window.addEventListener("load", function(e){
     CreateNav(document.getElementById("menu"));
 }, false);
 
+var testClass = function(menuObject) {
+    var GetChildItems = function() {
+        
+    };
+}
+
 function CreateNav(menuObject) {
     var ulLevel1 = [], ulLevel2 = [], ulLevel3 = [];
     var liLevel1 = [], liLevel2 = [], liLevel3 = [];
@@ -41,20 +47,28 @@ function GetChildItems(parentNodes, parentTagName, getTagName) {
 }
 
 function SetLiLevel(liLevel, level, process) {
-    [].forEach.call(liLevel, function(liItem) {
-        if (liItem) {
-            SetLiItem(liItem, level, process);
+    [].forEach.call(liLevel, function(item) {
+        if (item) {
+            if (process) {
+                SetItems(item, level, process);
+            } else {
+                if (item.classList.contains("hide")) {
+                    SetItems(item, level, "open");
+                } else {
+                    SetItems(item, level, "hide");
+                }
+            }
         }
     });
 }
 
-function SetLiItem(liItem, level, process) {
-    [].forEach.call(liItem.children, function(item) {
-        if (item) {
-            SetItems(item, level, process);
-        }
-    });
-}
+// function SetLiItem(liItem, level, process) {
+//     [].forEach.call(liItem.children, function(item) {
+//         if (item) {
+//             SetItems(item, level, process);
+//         }
+//     });
+// }
 
 function SetItems(item, level, process) {
     switch (item.tagName.toLowerCase()) {
@@ -79,7 +93,7 @@ function SetItemsByProcess(item, level, process) {
         case "open":
             item.classList.remove("hide");
             break;
-        case "close":
+        case "hide":
             item.classList.add("hide");
             break;
         default:
@@ -105,18 +119,15 @@ function SetItemByLevel(item, level) {
 
 function SetMenuEvent(event) {
     var targetElement = event.target;
-    var liLevel;
+    var liLevel = [], ulLevel = [];
     //
-    if (targetElement.toLowerCase() === "a") {
+    if (targetElement.tagName.toLowerCase() === "a") {
         if (targetElement.getAttribute("href") === "#") {
             event.preventDefault();
-            liLevel = targetElement.parentNode();
+            liLevel.push(targetElement.parentNode);
+            ulLevel = GetChildItems(liLevel, "li", "ul");
             //
-            if (liLevel.classList.contains("hide")) {
-                SetLiLevel(liLevel, 1, "open");
-            } else {
-                SetLiLevel(liLevel, 1, "hide");
-            }
+            SetLiLevel(ulLevel);
         }
     } else {
         event.preventDefault();
